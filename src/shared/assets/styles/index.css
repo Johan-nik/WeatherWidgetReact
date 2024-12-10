@@ -1,0 +1,22 @@
+* {
+    font-family: "Helios Cond", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Helios Cond";
+    src: url("../fonts/ofont.ru_Helios Cond.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Helios Cond";
+    src: url("../fonts/ofont.ru_Helios Cond.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}

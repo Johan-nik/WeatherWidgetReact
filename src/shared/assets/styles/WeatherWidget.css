@@ -1,0 +1,201 @@
+.widgetConteiner {
+    width: 325px;
+    height: max-content;
+    border-radius: 12px;
+    border: 1px solid #c4cad080;
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: #006fac;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.widgetConteiner__topBox {
+    min-height: 97px;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid rgba(67, 152, 198, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.widgetConteiner__imageLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.widgetConteiner__time p {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.widgetConteiner__infoPlace p {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+    user-select: none;
+}
+
+.widgetConteiner__elemDayBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widgetConteiner_bottomBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.widgetConteiner__elemDayTitle {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+    opacity: 0.5;
+    user-select: none;
+}
+
+.widgetConteiner__elemDayTemperature {
+    display: inline-block;
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: rgba(244, 246, 250, 1);
+}
+
+.widgetConteiner__elemDayTemperature sup {
+    font-size: 20px;
+    line-height: 0;
+}
+
+.widgetConteiner__elemDayWeather {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+}
+
+.widgetConteiner__dayWeatherInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 114px;
+}
+
+.widgetConteiner__infoWindHumidity {
+    display: flex;
+    gap: 4px;
+}
+
+.widgetConteiner__infoWindHumidity img {
+    width: 20px;
+    height: 20px;
+}
+
+.widgetConteiner__infoWindHumidity p {
+    margin: 0;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(244, 246, 250, 1);
+    text-align: center;
+}
+
+.widgetConteiner__buttonScroll {
+    border-style: none;
+    padding: 0;
+    background-color: rgba(244, 246, 250, 0);
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 42%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.widgetConteiner__buttonScroll.buttonRigth {
+    right: 12px;
+}
+
+.widgetConteiner__indicatorList {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+}
+
+.widgetConteiner__indicatorList button {
+    border-style: none;
+    background-color: rgba(244, 246, 250, 0);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+button.active svg circle {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 1;
+}
+
+.widgetConteiner__sourceWeather p {
+    margin: 0;
+    text-align: right;
+    font-family: "Helios Cond", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(244, 246, 250, 1);
+    opacity: 0.5;
+    user-select: none;
+}
+
+.widgetConteiner__sourceWeather span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.widgetConteiner:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: #006fac;
+}
+
+.widgetConteiner:hover .widgetConteiner__buttonScroll {
+    opacity: 1;
+    visibility: visible;
+}
