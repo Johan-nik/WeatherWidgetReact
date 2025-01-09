@@ -1,0 +1,41 @@
+[
+    {
+        "UTC": "2023-08-22T14:00:00Z",
+        "city": {
+            "name": "Москва",
+            "nameP": "в Москве"
+        },
+        "temperature": 18,
+        "description": "ясно",
+        "weatherCode": "clear",
+        "windDirection": "ЮЗ",
+        "windSpeed": 3,
+        "humidity": 13
+    },
+    {
+        "UTC": "2023-08-22T14:00:00Z",
+        "city": {
+            "name": "Санкт-Петербург",
+            "nameP": "в Санкт-Петербурге"
+        },
+        "temperature": 18,
+        "description": "ясно",
+        "weatherCode": "clear",
+        "windDirection": "ЮЗ",
+        "windSpeed": 3,
+        "humidity": 13
+    },
+    {
+        "UTC": "2023-08-22T14:00:00Z",
+        "city": {
+            "name": "Омск",
+            "nameP": "в Омске"
+        },
+        "temperature": 18,
+        "description": "ясно",
+        "weatherCode": "clear",
+        "windDirection": "ЮЗ",
+        "windSpeed": 3,
+        "humidity": 13
+    }
+]

@@ -1,9 +1,29 @@
-import "../shared/assets/styles/WeatherWidget.css";
+import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Dot } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import '../shared/assets/styles/Carousel.css'
+import WeatherWidgetClearDay from '../widgets/ui/WeatherWidgetClearDay';
+import WeatherWidgetCloudyDay from "../widgets/ui/WeatherWidgetCloudyDay";
+import WeatherWidgetSnowDay from "../widgets/ui/WeatherWidgetSnowDay";
 
-function ButtonScroll() {
-    return (
-        <>
-            <button className="widgetConteiner__buttonScroll buttonLeft">
+
+
+export default class extends React.Component {
+    render() {
+      return (
+        <CarouselProvider
+          naturalSlideWidth={325}
+          naturalSlideHeight={280}
+          totalSlides={3}
+          infinite={true}
+        >
+          <Slider>
+            <Slide index={0}><WeatherWidgetClearDay /></Slide>
+            <Slide index={1}><WeatherWidgetCloudyDay /></Slide>
+            <Slide index={2}><WeatherWidgetSnowDay /></Slide>
+          </Slider>
+          <ButtonBack className='carouselButtonScroll buttonLeft'>
+          <div className="widgetConteiner__buttonScroll">
                 <svg
                     width="24"
                     height="24"
@@ -25,8 +45,10 @@ function ButtonScroll() {
                         fill="white"
                     />
                 </svg>
-            </button>
-            <button className="widgetConteiner__buttonScroll buttonRigth">
+            </div>
+          </ButtonBack>
+          <ButtonNext className='carouselButtonScroll buttonRigth'>
+            <div className="widgetConteiner__buttonScroll">
                 <svg
                     width="24"
                     height="24"
@@ -48,9 +70,14 @@ function ButtonScroll() {
                         fill="white"
                     />
                 </svg>
-            </button>
-        </>
-    );
-}
-
-export default ButtonScroll;
+            </div>
+          </ButtonNext>
+          <div className='caruselDotConteiner'>
+            <Dot className='caruselDot' slide={0} />
+            <Dot className='caruselDot' slide={1} />
+            <Dot className='caruselDot' slide={2} />
+          </div>
+        </CarouselProvider>
+      );
+    }
+  }

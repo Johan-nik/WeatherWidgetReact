@@ -1,0 +1,211 @@
+.clearBackgroundDay {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: #006fac;
+}
+
+.cloudyBackgroundDay {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(70, 121, 150, 1);
+}
+
+.snowBackgroundDay {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(92, 136, 162, 1);
+}
+
+.rainBackgroundDay {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(46, 98, 127, 1);
+}
+
+.stormBackgroundDay {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(20, 78, 110, 1);
+}
+
+.clearBackgroundNight {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(25, 61, 83, 1);
+}
+
+.cloudyBackgroundNight {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(28, 50, 64, 1);
+}
+
+.snowBackgroundNight {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(38, 53, 63, 1);
+}
+
+.rainBackgroundNight {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(30, 44, 53, 1);
+}
+
+.stormBackgroundNight {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+        132.65deg,
+        rgba(255, 255, 255, 0.5) 0.75%,
+        rgba(255, 255, 255, 0) 44.6%
+    );
+    background-color: rgba(18, 33, 43, 1);
+}
+
+
+
+
+.clearBackgroundDay:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: #006fac;
+}
+
+.cloudyBackgroundDay:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(70, 121, 150, 1);
+}
+
+.snowBackgroundDay:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(92, 136, 162, 1);
+}
+
+.rainBackgroundDay:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(46, 98, 127, 1);
+}
+
+.stormBackgroundDay:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(20, 78, 110, 1);
+}
+
+.clearBackgroundNight:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(25, 61, 83, 1);
+}
+.cloudyBackgroundNight:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(28, 50, 64, 1);
+}
+
+.snowBackgroundNight:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(38, 53, 63, 1);
+}
+
+.rainBackgroundNight:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(30, 44, 53, 1);
+}
+
+.stormBackgroundNight:hover {
+    background-blend-mode: overlay;
+    background: linear-gradient(
+            132.65deg,
+            rgba(255, 255, 255, 0.5) 0.75%,
+            rgba(255, 255, 255, 0) 44.6%
+        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
+    background-color: rgba(18, 33, 43, 1);
+}

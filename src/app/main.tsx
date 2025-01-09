@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../shared/assets/styles/index.css";
-import WeatherWidget from "../widgets/ui/WeatherWidget";
+import CarouselReact from "../features/Carousel-react";
+
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <WeatherWidget />
+        <CarouselReact />
     </StrictMode>
 );

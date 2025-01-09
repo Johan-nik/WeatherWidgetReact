@@ -1,14 +1,14 @@
-import weatherLogo from "../shared/assets/image/weather-logo/sunny.svg";
-import windLogo from "../shared/assets/image/weather-item/wind.svg";
-import dropLogo from "../shared/assets/image/weather-item/drop.svg";
-import ButtonScroll from "../../features/ButtonScroll";
+import weatherLogo from "../../shared/assets/image/weather-logo/claud-moon.svg";
+import windLogo from "../../shared/assets/image/weather-item/wind.svg";
+import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
 import IndicatorListButton from "../../features/IndicatorListButton";
-import "../shared/assets/styles/WeatherWidget.css";
+import "../../shared/assets/styles/WeatherWidget.css";
+import "../../shared/assets/styles/WeatherWidgetBackground.css"
 
-function WeatherWidget() {
+function WeatherWidgetCloudyNight() {
     return (
         <>
-            <div className="widgetConteiner">
+            <div className="widgetConteiner cloudyBackgroundNight">
                 <div className="widgetConteiner__topBox">
                     <div className="widgetConteiner__infoConteiner">
                         <div className="widgetConteiner__time">
@@ -22,7 +22,6 @@ function WeatherWidget() {
                         <img src={weatherLogo} alt="" />
                     </div>
                 </div>
-                <ButtonScroll />
                 <div className="widgetConteiner_bottomBox">
                     <p className="widgetConteiner__elemDayTitle">
                         Общий прогноз на день в Москве
@@ -53,10 +52,9 @@ function WeatherWidget() {
                         </p>
                     </div>
                 </div>
-                <IndicatorListButton />
             </div>
         </>
     );
 }
 
-export default WeatherWidget;
+export default WeatherWidgetCloudyNight;
