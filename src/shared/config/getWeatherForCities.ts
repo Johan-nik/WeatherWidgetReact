@@ -8,7 +8,7 @@ type ErrorMessage = {
 export interface GetWeatherForCitiesRequest {
     status: string;
     data: {
-        UTC: string; //часовой пояс
+        timeZoneOffset: string; //часовой пояс
         city: {
             name: string; //например:Москва
             nameP: string; //например: в Москве

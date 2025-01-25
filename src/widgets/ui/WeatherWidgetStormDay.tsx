@@ -1,4 +1,5 @@
 import React from "react";
+import useCurrentTime from "../../features/useCurrentTime";
 import weatherLogo from "../../shared/assets/image/weather-logo/storm.svg";
 import windLogo from "../../shared/assets/image/weather-item/wind.svg";
 import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
@@ -6,7 +7,7 @@ import "../../shared/assets/styles/WeatherWidget.css";
 import "../../shared/assets/styles/WeatherWidgetBackground.css";
 
 interface CityData {
-    UTC: string;
+    timeZoneOffset: string;
     city: {
         name: string;
         nameP: string;
@@ -24,12 +25,18 @@ type Props = {
 };
 
 const WeatherWidgetStormDay: React.FC<Props> = ({ resp }) => {
+    // Преобразуем смещение времени из строкового формата в числовое значение в часах
+    const utcOffset = parseInt(resp.timeZoneOffset, 10) / 60;
+
+    // Получаем текущее время для города с учётом смещения
+    const currentTime = useCurrentTime(utcOffset);
+
     return (
         <div className="widgetConteiner stormBackgroundDay">
             <div className="widgetConteiner__topBox">
                 <div className="widgetConteiner__infoConteiner">
                     <div className="widgetConteiner__time">
-                        <p>14:00</p>
+                        <p>{currentTime}</p>
                     </div>
                     <div className="widgetConteiner__infoPlace">
                         <p>{resp.city.name}</p>

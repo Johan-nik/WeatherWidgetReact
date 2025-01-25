@@ -98,10 +98,7 @@
     background-color: rgba(18, 33, 43, 1);
 }
 
-
-
-
-.clearBackgroundDay:hover {
+.carousel:hover .clearBackgroundDay {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -112,7 +109,7 @@
     background-color: #006fac;
 }
 
-.cloudyBackgroundDay:hover {
+.carousel:hover .cloudyBackgroundDay {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -123,7 +120,7 @@
     background-color: rgba(70, 121, 150, 1);
 }
 
-.snowBackgroundDay:hover {
+.carousel:hover .snowBackgroundDay {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -134,7 +131,7 @@
     background-color: rgba(92, 136, 162, 1);
 }
 
-.rainBackgroundDay:hover {
+.carousel:hover .rainBackgroundDay {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -145,7 +142,7 @@
     background-color: rgba(46, 98, 127, 1);
 }
 
-.stormBackgroundDay:hover {
+.carousel:hover .stormBackgroundDay {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -156,7 +153,7 @@
     background-color: rgba(20, 78, 110, 1);
 }
 
-.clearBackgroundNight:hover {
+.carousel:hover .clearBackgroundNight {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -166,7 +163,7 @@
         linear-gradient(90deg, rgba(0, 0, 0, 0) 70.63%, rgba(0, 0, 0, 0.2) 100%);
     background-color: rgba(25, 61, 83, 1);
 }
-.cloudyBackgroundNight:hover {
+.carousel:hover .cloudyBackgroundNight {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -177,7 +174,7 @@
     background-color: rgba(28, 50, 64, 1);
 }
 
-.snowBackgroundNight:hover {
+.carousel:hover .snowBackgroundNight {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -188,7 +185,7 @@
     background-color: rgba(38, 53, 63, 1);
 }
 
-.rainBackgroundNight:hover {
+.carousel:hover .rainBackgroundNight {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,
@@ -199,7 +196,7 @@
     background-color: rgba(30, 44, 53, 1);
 }
 
-.stormBackgroundNight:hover {
+.carousel:hover .stormBackgroundNight {
     background-blend-mode: overlay;
     background: linear-gradient(
             132.65deg,

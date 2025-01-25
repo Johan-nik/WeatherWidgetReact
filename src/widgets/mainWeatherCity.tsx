@@ -13,7 +13,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import "../shared/assets/styles/Carousel.css";
 
 interface CityData {
-    UTC: string;
+    timeZoneOffset: string;
     city: {
         name: string;
         nameP: string;
@@ -79,17 +79,23 @@ export default class WeatherCarousel extends React.Component<{}, State> {
             >
                 <Slider>
                     {cityData.map((city, index) => {
-                        // Получение названия виджета
-                        const widgetName = WeatherSwitch(city.weatherCode);
+                        // Получаем имя виджета по weatherCode и времени суток
+                        const widgetName = WeatherSwitch(
+                            city.weatherCode,
+                            parseInt(city.timeZoneOffset, 10) / 60 // Передаём смещение времени
+                        );
 
-                        // Динамическое подключение компонента
-                        const WeatherWidget = React.lazy(() =>
-                            import(`./ui/${widgetName}`)
+                        // Динамическая загрузка компонента виджета
+                        const WeatherWidget = React.lazy(
+                            () => import(`./ui/${widgetName}`) // Например, WeatherWidgetClearDay
                         );
 
                         return (
                             <Slide key={index} index={index}>
-                                <React.Suspense fallback={<div>Loading widget...</div>}>
+                                <React.Suspense
+                                    fallback={<div>Loading widget...</div>}
+                                >
+                                    {/* Передаём весь объект города в компонент */}
                                     <WeatherWidget resp={city} />
                                 </React.Suspense>
                             </Slide>

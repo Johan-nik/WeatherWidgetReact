@@ -1,4 +1,5 @@
 import React from "react";
+import useCurrentTime from "../../features/useCurrentTime";
 import weatherLogo from "../../shared/assets/image/weather-logo/sunny.svg";
 import windLogo from "../../shared/assets/image/weather-item/wind.svg";
 import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
@@ -6,7 +7,7 @@ import "../../shared/assets/styles/WeatherWidget.css";
 import "../../shared/assets/styles/WeatherWidgetBackground.css";
 
 interface CityData {
-    UTC: string;
+    timeZoneOffset: string; // Смещение времени относительно UTC в минутах
     city: {
         name: string;
         nameP: string;
@@ -20,19 +21,25 @@ interface CityData {
 }
 
 type Props = {
-    resp: CityData; // Пропс `resp` с типом CityData
+    resp: CityData; // Пропс с данными города
 };
 
 const WeatherWidgetClearDay: React.FC<Props> = ({ resp }) => {
+    // Преобразуем смещение времени из строкового формата в числовое значение в часах
+    const utcOffset = parseInt(resp.timeZoneOffset, 10) / 60;
+
+    // Получаем текущее время для города с учётом смещения
+    const currentTime = useCurrentTime(utcOffset);
+
     return (
         <div className="widgetConteiner clearBackgroundDay">
             <div className="widgetConteiner__topBox">
                 <div className="widgetConteiner__infoConteiner">
                     <div className="widgetConteiner__time">
-                        <p>14:00</p>
+                        <p>{currentTime}</p> {/* Текущее время в городе */}
                     </div>
                     <div className="widgetConteiner__infoPlace">
-                        <p>{resp.city.name}</p>
+                        <p>{resp.city.name}</p> {/* Название города */}
                     </div>
                 </div>
                 <div className="widgetConteiner__imageLogo">
@@ -46,11 +53,10 @@ const WeatherWidgetClearDay: React.FC<Props> = ({ resp }) => {
                 <div className="widgetConteiner__elemDayBox">
                     <div>
                         <p className="widgetConteiner__elemDayTemperature">
-                            {resp.temperature}<sup>o</sup>
+                            {resp.temperature}
+                            <sup>o</sup>
                         </p>
-                        <p className="widgetConteiner__elemDayWeather">
-                            {resp.description}
-                        </p>
+                        <p className="widgetConteiner__elemDayWeather">{resp.description}</p>
                     </div>
                     <div className="widgetConteiner__dayWeatherInfo">
                         <div className="widgetConteiner__infoWindHumidity">

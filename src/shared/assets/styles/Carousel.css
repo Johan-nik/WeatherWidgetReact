@@ -35,6 +35,13 @@
     visibility: visible;
 }
 
+.carouselButtonScroll:hover svg{
+    rect {
+        fill-opacity: 0.6;
+        transition: 0.3s ease-in-out;
+    }
+}
+
 .caruselDotConteiner {
     position: absolute;
     z-index: 11;
@@ -55,6 +62,14 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+.caruselDot:hover  {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
 .carousel__dot--selected {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel__dot--selected:hover {
     background-color: rgba(255, 255, 255, 1);
 }

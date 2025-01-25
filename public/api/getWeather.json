@@ -2,7 +2,7 @@
     "status": "success",
     "data": [
         {
-            "UTC": "2023-08-22T14:00:00Z",
+            "timeZoneOffset": "180",
             "city": {
                 "name": "Москва",
                 "nameP": "в Москве"
@@ -15,27 +15,27 @@
             "humidity": 13
         },
         {
-            "UTC": "2023-08-22T14:00:00Z",
+            "timeZoneOffset": "180",
             "city": {
                 "name": "Санкт-Петербург",
                 "nameP": "в Санкт-Петербурге"
             },
             "temperature": 15,
-            "description": "пасмурно",
-            "weatherCode": "cloudy",
+            "description": "идёт снег",
+            "weatherCode": "snow",
             "windDirection": "ЮЗ",
             "windSpeed": 3,
             "humidity": 19
         },
         {
-            "UTC": "2023-08-22T14:00:00Z",
+            "timeZoneOffset": "360",
             "city": {
                 "name": "Омск",
                 "nameP": "в Омске"
             },
             "temperature": 11,
-            "description": "идёт снег",
-            "weatherCode": "snow",
+            "description": "гроза",
+            "weatherCode": "storm",
             "windDirection": "ЮЗ",
             "windSpeed": 3,
             "humidity": 15
