@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "../shared/assets/styles/index.css";
-import CarouselReact from "../widgets/mainWeatherCity";
+import CarouselReact from "../widgets/ui/mainWeatherCity";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
