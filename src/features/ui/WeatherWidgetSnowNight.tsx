@@ -1,19 +1,19 @@
 import React from "react";
-import useCurrentTime from "../../../features/useCurrentTime";
-import weatherLogo from "../../../shared/assets/image/weather-logo/moon.svg";
-import windLogo from "../../../shared/assets/image/weather-item/wind.svg";
-import dropLogo from "../../../shared/assets/image/weather-item/drop.svg";
-import s from "../../../shared/assets/styles/WeatherWidget.module.css";
-import sBack from "../../../shared/assets/styles/Carousel.module.css";
-import { Props } from "../../types/typesWidget";
-import { getUtcOffsetInHours } from "../../utils/getUtcOffsetInHours";
+import useCurrentTime from "../../shared/lib/useCurrentTime";
+import weatherLogo from "../../shared/assets/image/weather-logo/snow.svg";
+import windLogo from "../../shared/assets/image/weather-item/wind.svg";
+import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
+import s from "./WeatherWidget.module.css";
+import sBack from "../../widgets/ui/Carousel.module.css";
+import { Props } from "../../shared/types/typesWidget";
+import { getUtcOffsetInHours } from "../../shared/lib/utils/getUtcOffsetInHours";
 
-const WeatherWidgetClearNight: React.FC<Props> = ({ resp }) => {
+const WeatherWidgetSnowNight: React.FC<Props> = ({ resp }) => {
     const utcOffset = getUtcOffsetInHours(resp.timeZoneOffset);
     const currentTime = useCurrentTime(utcOffset);
 
     return (
-        <div className={`${s.widgetConteiner} ${sBack.clearBackgroundNight}`}>
+        <div className={`${s.widgetConteiner} ${sBack.snowBackgroundNight}`}>
             <div className={s.widgetConteiner__topBox}>
                 <div className={s.widgetConteiner__infoConteiner}>
                     <div className={s.widgetConteiner__time}>
@@ -24,7 +24,7 @@ const WeatherWidgetClearNight: React.FC<Props> = ({ resp }) => {
                     </div>
                 </div>
                 <div className={s.widgetConteiner__imageLogo}>
-                    <img src={weatherLogo} alt="Clear Night" />
+                    <img src={weatherLogo} alt="Snow at night" />
                 </div>
             </div>
             <div className={s.widgetConteiner_bottomBox}>
@@ -64,4 +64,4 @@ const WeatherWidgetClearNight: React.FC<Props> = ({ resp }) => {
     );
 };
 
-export default WeatherWidgetClearNight;
+export default WeatherWidgetSnowNight;

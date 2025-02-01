@@ -1,13 +1,12 @@
 import React from "react";
-import useCurrentTime from "../../../features/useCurrentTime";
-import weatherLogo from "../../../shared/assets/image/weather-logo/rain.svg";
-import windLogo from "../../../shared/assets/image/weather-item/wind.svg";
-import dropLogo from "../../../shared/assets/image/weather-item/drop.svg";
-import s from "../../../shared/assets/styles/WeatherWidget.module.css";
-import sBack from "../../../shared/assets/styles/Carousel.module.css";
-import { Props } from "../../types/typesWidget";
-import { getUtcOffsetInHours } from "../../utils/getUtcOffsetInHours";
-
+import useCurrentTime from "../../shared/lib/useCurrentTime";
+import weatherLogo from "../../shared/assets/image/weather-logo/rain.svg";
+import windLogo from "../../shared/assets/image/weather-item/wind.svg";
+import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
+import s from "./shared/assets/styles/WeatherWidget.module.css";
+import sBack from "../../widgets/ui/Carousel.module.css";
+import { Props } from "../../shared/types/typesWidget";
+import { getUtcOffsetInHours } from "../../shared/lib/utils/getUtcOffsetInHours";
 
 const WeatherWidgetRainDay: React.FC<Props> = ({ resp }) => {
     const utcOffset = getUtcOffsetInHours(resp.timeZoneOffset);

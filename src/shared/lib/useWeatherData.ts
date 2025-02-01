@@ -16,10 +16,18 @@ export const useWeatherData = (): WeatherState => {
                 if (weatherData.data.length === 0) {
                     throw new Error("No weather data available");
                 }
-                setState({ cityData: weatherData.data, loading: false, error: null });
+                setState({
+                    cityData: weatherData.data,
+                    loading: false,
+                    error: null,
+                });
             } catch (error) {
                 console.error("Error fetching weather data:", error);
-                setState({ cityData: null, loading: false, error: "Failed to load weather data" });
+                setState({
+                    cityData: null,
+                    loading: false,
+                    error: "Failed to load weather data",
+                });
             }
         };
 

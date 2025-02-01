@@ -1,9 +1,3 @@
-import useCurrentTime from "./useCurrentTime";
-
-interface CityData {
-    timeZoneOffset: string; 
-}
-
 type WeatherCode = 'clear' | 'cloudy' | 'snow' | 'rain' | 'storm';
 
 export default function WeatherSwitch(weatherCode: string, utcOffset: number): string {
