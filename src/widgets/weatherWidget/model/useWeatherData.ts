@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getWeatherForCities } from "../../shared/config/getWeatherForCities";
-import { WeatherState } from "../types/typesWidget";
+import { getWeatherForCities } from "../../../shared/config/getWeatherForCities";
+import { WeatherState } from "../../../shared/types/typesWidget";
 
 export const useWeatherData = (): WeatherState => {
     const [state, setState] = useState<WeatherState>({

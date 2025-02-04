@@ -1,19 +1,19 @@
 import React from "react";
-import useCurrentTime from "../../shared/lib/useCurrentTime";
-import weatherLogo from "../../shared/assets/image/weather-logo/snow.svg";
-import windLogo from "../../shared/assets/image/weather-item/wind.svg";
-import dropLogo from "../../shared/assets/image/weather-item/drop.svg";
-import s from "./WeatherWidget.module.css";
-import sBack from "../../widgets/ui/Carousel.module.css";
-import { Props } from "../../shared/types/typesWidget";
-import { getUtcOffsetInHours } from "../../shared/lib/utils/getUtcOffsetInHours";
+import useCurrentTime from "../../../widgets/weatherWidget/model/useCurrentTime";
+import weatherLogo from "../../../shared/assets/image/weather-logo/rain.svg";
+import windLogo from "../../../shared/assets/image/weather-item/wind.svg";
+import dropLogo from "../../../shared/assets/image/weather-item/drop.svg";
+import s from "./shared/assets/styles/WeatherWidget.module.css";
+import sBack from "../../../widgets/weatherWidget/ui/Carousel.module.css";
+import { Props } from "../../../shared/types/typesWidget";
+import { utcOffsetInHours } from "../../../widgets/weatherWidget/model/utils/utcOffsetInHours";
 
-const WeatherWidgetSnowDay: React.FC<Props> = ({ resp }) => {
-    const utcOffset = getUtcOffsetInHours(resp.timeZoneOffset);
+const WeatherWidgetRainNight: React.FC<Props> = ({ resp }) => {
+    const utcOffset = utcOffsetInHours(resp.timeZoneOffset);
     const currentTime = useCurrentTime(utcOffset);
 
     return (
-        <div className={`${s.widgetConteiner} ${sBack.snowBackgroundDay}`}>
+        <div className={`${s.widgetConteiner} ${sBack.rainBackgroundNight}`}>
             <div className={s.widgetConteiner__topBox}>
                 <div className={s.widgetConteiner__infoConteiner}>
                     <div className={s.widgetConteiner__time}>
@@ -24,7 +24,7 @@ const WeatherWidgetSnowDay: React.FC<Props> = ({ resp }) => {
                     </div>
                 </div>
                 <div className={s.widgetConteiner__imageLogo}>
-                    <img src={weatherLogo} alt="Snow" />
+                    <img src={weatherLogo} alt="Rain" />
                 </div>
             </div>
             <div className={s.widgetConteiner_bottomBox}>
@@ -64,4 +64,4 @@ const WeatherWidgetSnowDay: React.FC<Props> = ({ resp }) => {
     );
 };
 
-export default WeatherWidgetSnowDay;
+export default WeatherWidgetRainNight;

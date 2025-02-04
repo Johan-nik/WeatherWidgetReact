@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-import { useWeatherData } from "../../shared/lib/useWeatherData";
-import { getWeatherWidget } from "../../shared/lib/utils/getWeatherWidget";
+import { useWeatherData } from "../model/useWeatherData";
+import { weatherWidget } from "../model/utils/WeatherWidget";
 import {
     CarouselProvider,
     Slider,
@@ -29,7 +29,7 @@ const WeatherCarousel: React.FC = () => {
         >
             <Slider>
                 {cityData.map((city, index) => {
-                    const WeatherWidget = getWeatherWidget(
+                    const WeatherWidget = weatherWidget(
                         city.weatherCode,
                         city.timeZoneOffset
                     );
